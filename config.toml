@@ -1,3 +1,20 @@
-baseURL = "http://example.org/"
+contentDir = "content"
+layoutDir = "layouts"
+publishDir = "public"
+buildDrafts = true
+baseURL = "/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "La Razante"
+canonifyURLs = true
+googleAnalytics= ""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[params]
+  description = "Pelicula de Hans Garcia"
+  author = "Enzo Vezzaro"
+  variables = "Yes"
+  english = "EN"
+  logo = "/img/logo.svg"
