@@ -4,7 +4,28 @@
     {{ partial "head.html" }}
   </head>
   <body>
-    <p>Homepage</p>
+
+    {{ partial "navbar.html" }}
+
+    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+    <div id="main">
+      {{ partial "intro-homepage.html" }}
+
+      {{ partial "sipnosis.html" }}
+
+      {{ partial "movie.html" }}
+
+      {{ partial "crew_member.html" }}
+
+      {{ partial "our_vision.html" }}
+
+      {{ partial "trailer_vc.html" }}
+
+      {{ partial "awards.html" }}
+
+      {{ partial "credits.html" }}
+    </div>
+
     {{ partial "scripts.html" }}
   </body>
 </html>
