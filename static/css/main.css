@@ -1,0 +1,150 @@
+/* fonts */
+@font-face {
+    font-family: credits;
+    src: url(../fonts/Uni_acc.ttf);
+}
+
+/* boostrap */
+.container-fluid{
+  padding: 0 !important;
+}
+
+/* navbar */
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover{
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.navbar-icon{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+
+/* introduction */
+
+.introduction-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url('../img/index_background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.introduction-container .introduction-content{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.introduction-container .introduction-content .introduction-title{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: right;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.introduction-container .introduction-content .introduction-footer{
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 60%,
+    rgba(0, 0, 0, 0) 80%,
+    rgba(0, 0, 0, 0) 100%
+    );
+}
+
+.introduction-container .introduction-content .introduction-footer .credits{
+  width: 60%;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.introduction-container .introduction-content .introduction-footer .credits p{
+  font-family: credits;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #939393;
+}
+
+
+
+
+
+
+/* media queries */
+@media screen and (max-width: 1024px) {
+  .introduction-container .introduction-content .introduction-footer .credits p{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .introduction-container .introduction-content .introduction-footer .credits {
+    width: 90%;
+  }
+  .introduction-container .introduction-content .introduction-footer .credits p{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px; }
+    .sidenav a {font-size: 18px;}
+    .introduction-container .introduction-content .introduction-footer .credits p{
+      font-size: 1rem;
+      line-height: 1rem;
+    }
+}
