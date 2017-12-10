@@ -67,6 +67,11 @@ h2{
   margin-bottom: 10px;
 }
 
+h4{
+  font-size: 36px;
+  color: #FFCC33;
+}
+
 button:hover {
     cursor: pointer;
 }
@@ -101,6 +106,116 @@ button:focus {
 
 .custom-btn .btn-content p{
   margin: 0;
+}
+
+/* Carousel */
+.tab-content{
+  width: 100%;
+}
+
+.carousel{
+  width: 100%;
+  margin: 100px 0px;
+}
+
+.carousel .item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hide{
+  display: none !important;
+}
+
+.carousel .item:focus{
+  outline: none;
+}
+
+.carousel .item .img-carousel{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0px 20px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.carousel .item .img-carousel img{
+  height: 300px;
+  transition: 0.2s ease;
+}
+
+.carousel .item .text-carousel p{
+  z-index: 2;
+  color: white;
+  font-size: 48px;
+  line-height: 48px;
+  width: 50%;
+  text-align: left;
+  position: relative;
+  top: -150px;
+}
+
+.carousel .slick-current .img-carousel{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.carousel .slick-current .img-carousel img{
+  height: 300px;
+}
+
+.carousel .slick-current .text-carousel p{
+  z-index: 2;
+  color: white;
+  font-size: 48px;
+  line-height: 48px;
+  width: 50%;
+  text-align: left;
+  position: relative;
+  top: -150px;
+}
+
+.carousel-nav{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-nav .carousel-links{
+  width: 100%;
+}
+
+.carousel-nav .carousel-links{
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-nav .carousel-links a{
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 28px;
+  cursor: pointer;
+}
+.carousel-nav .carousel-links:first-child{
+  justify-content: flex-end;
+  border-right: 2px solid #ffcc33;
+  padding-right: 15px;
+}
+
+.carousel-nav .carousel-links:last-child{
+  padding-left: 15px;
 }
 
 /* introduction */
@@ -164,14 +279,26 @@ button:focus {
   background: #000 url('../img/Dominican_Republic_map.png');
   background-repeat: no-repeat;
   background-position: left;
-  padding-top: 100px;
 }
 
 /* MOVIE */
 #movie{
-  background: #000 url('../img/Dominican_Republic_map.png');
+  background: url('../img/movie_background_2.png');
   background-repeat: no-repeat;
-  background-position: left;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* CREW MEMBER */
+#crew_member{
+  background-color: #000;
+}
+
+#crew_member .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #movie h2, #movie .col-text{
@@ -194,6 +321,7 @@ button:focus {
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 150px;
   padding-bottom: 150px;
 }
 
