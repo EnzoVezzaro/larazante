@@ -1,24 +1,19 @@
-<div class="container-fluid">
-  <div class="introduction-container">
-
-    <div class="introduction-content">
-      <div class="introduction-title">
-        <h1>LA RAZANTE</h1>
-        <h5>UNA PELICULA DE HANS GARCIA</h5>
-        <p>“ES MEJOR SER ODIADO POR LO QUE ERES QUE SER AMADO POR LO QUE NO ERES”
-          <br>André Gide, escritor francés, Premio Nobel de Literatura en 1947</p>
-      </div>
-      <div class="introduction-footer">
-        <div class="credits">
-          <p>RAZANTE FILMS SRL Ã<br> LA RAZANTE kHANS GARCIA aMARCEL FONDEUR hINGRID CRUZ
-          gJAIME GOMEZ <br>dDESIGNER NAME eEDITORS NAME f  DESIGNERS NAME g  CINEMATOGRAPHER
-          p  EX PRODUCER 1 EX PRODUCER 2 j  PRODUCER ONE PRODUCER 2 m STORY WRITER
-          o  SCREEN WRITER k  DIRECTOR NAME
-          </p>
-          <a href="/homepage">Homepage</a>
-        </div>
+<div class="container-fluid" id="movie">
+  <div class="container">
+    <div class="content">
+      <div class="col-center">
+        <h2>LA PELICULA</h2>
+        <p class="col-text">LA RAZANTE es una película que narra un drama común no solo en sociedades como las de República Dominicana sino en cualquier parte del mundo, es la historia del abandono que sufren muchos niños, padres que se ausentan dejando todo el peso de la crianza a las madres y que estas siempre con la esperanza contribuyen a que estos niños abandonados idealicen al padre ausente. Esta película es la lucha entre el orgullo y la necesidad, la obligación de buscar un padre que por mas de 20 años no volvió, sin saber su hijo si por verguenza o por desidia.</p>
+        <button type="button" id="button-movie" class="custom-btn" data-toggle="modal" data-target="#movie_modal">
+          <div class="btn-icon">
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+          </div>
+          <div class="btn-content">
+            <p>DESCUBRE MAS</p>
+          </div>
+        </button>
+        {{ partial "movie_modal.html" }}
       </div>
     </div>
-
   </div>
 </div>

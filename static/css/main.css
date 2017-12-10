@@ -6,7 +6,7 @@
 
 /* boostrap */
 .container-fluid{
-  padding: 0 !important;
+  padding: 0;
 }
 
 /* navbar */
@@ -164,37 +164,74 @@ button:focus {
   background: #000 url('../img/Dominican_Republic_map.png');
   background-repeat: no-repeat;
   background-position: left;
+  padding-top: 100px;
 }
 
-.sipnosis-content{
+/* MOVIE */
+#movie{
+  background: #000 url('../img/Dominican_Republic_map.png');
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#movie h2, #movie .col-text{
+  margin-bottom: 80px;
+}
+
+#button-movie{
+  white-space: nowrap;
+  width: 250px;
+}
+
+#button-movie .btn-icon{
+  width: 10%;
+}
+
+/* STRUCTURE */
+
+.content{
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
-  padding: 150px 0;
+  padding-bottom: 150px;
 }
 
-.sipnosis-content .sipnosis-left{
+.content .col-left{
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.sipnosis-content .sipnosis-left .sipnosis-text{
+.content .col-left .col-text{
   width: 60%;
   color: #939393;
   margin-bottom: 30px;
 }
 
-.sipnosis-content .sipnosis-right{
+.content .col-center{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.content .col-center .col-text{
+  color: #939393;
+  margin-bottom: 30px;
+}
+
+.content .col-right{
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.sipnosis-content .sipnosis-right .img-1{
+.content .col-right .img-1{
   width: 300px;
   height: 300px;
   max-width: 350px;
@@ -205,7 +242,7 @@ button:focus {
   top: 20px;
 }
 
-.sipnosis-content .sipnosis-right .img-2{
+.content .col-right .img-2{
   width: 350px;
   height: 250px;
   max-width: 350px;
@@ -225,14 +262,14 @@ button:focus {
     line-height: 2rem;
   }
 
-  .sipnosis-content .sipnosis-right .img-1{
+  .content .col-right .img-1{
     width: 300px;
     height: 300px;
     max-width: 350px;
     max-height: 350px;
   }
 
-  .sipnosis-content .sipnosis-right .img-2{
+  .content .col-right .img-2{
     width: 350px;
     height: 250px;
     max-width: 350px;
@@ -243,12 +280,12 @@ button:focus {
 
 @media screen and (max-width: 800px) {
 
-  .sipnosis-content .sipnosis-right .img-1{
+  .content .col-right .img-1{
     width: 200px;
     height: 200px;
   }
 
-  .sipnosis-content .sipnosis-right .img-2{
+  .content .col-right .img-2{
     width: 250px;
     height: 150px;
   }
@@ -264,24 +301,24 @@ button:focus {
     font-size: 1.5rem;
     line-height: 1.5rem;
   }
-  .sipnosis-content{
+  .content{
     flex-direction: column;
   }
-  .sipnosis-content .sipnosis-left{
+  .content .col-left{
     width: 100%;
     align-items: center;
     text-align: center;
   }
-  .sipnosis-content .sipnosis-right{
+  .content .col-right{
     width: 100%;
     align-items: center;
     margin-top: 70px;
   }
-  .sipnosis-content .sipnosis-right .img-1 {
+  .content .col-right .img-1 {
     width: 360px;
     height: 230px;
   }
-  .sipnosis-content .sipnosis-right .img-2 {
+  .content .col-right .img-2 {
     width: 300px;
     height: 150px;
   }
