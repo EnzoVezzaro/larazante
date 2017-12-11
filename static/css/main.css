@@ -59,8 +59,17 @@
     transition: margin-left .5s;
 }
 
+#main-homepage {
+    transition: margin-left .5s;
+    margin-bottom: 300px;
+}
+
 
 /* Common */
+body{
+  background-color: #000;
+}
+
 h2{
   font-size: 60px;
   color: #ffffff;
@@ -78,6 +87,10 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+.align-left{
+  align-items: flex-start !important;
 }
 
 /* CUSTOM BTN */
@@ -241,12 +254,21 @@ button:focus {
   justify-content: flex-end;
   flex-direction: column;
   text-align: right;
+  font-size: 24px;
+  line-height: 24px;
+  color: #fff;
   margin-right: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.introduction-container .introduction-content .introduction-title span{
+  font-size: 18px;
+  line-height: 18px;
+  color: #fff;
 }
 
 .introduction-container .introduction-content .introduction-footer{
-  height: 35%;
+  height: 40%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -266,7 +288,7 @@ button:focus {
   padding-bottom: 20px;
 }
 
-.introduction-container .introduction-content .introduction-footer .credits p{
+.credits p{
   font-family: credits;
   font-size: 2.5rem;
   line-height: 2.5rem;
@@ -294,15 +316,15 @@ button:focus {
   background-color: #000;
 }
 
-#crew_member .content{
+#crew_member .content, #awards .content{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#movie h2, #movie .col-text{
-  margin-bottom: 80px;
+#movie .title_movie, #movie .col-text{
+  margin-bottom: 60px;
 }
 
 #button-movie{
@@ -312,6 +334,35 @@ button:focus {
 
 #button-movie .btn-icon{
   width: 10%;
+}
+
+/* Out Vision */
+#our_vision{
+  background-color: #000;
+}
+
+/* Trailer VC */
+#trailer_vc{
+  background: #000 url('../img/trailer_vc.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-video{
+  padding: 0 50px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container-video .video-caption{
+    color: #939393;
+}
+
+/* Awards */
+#awards{
+  background-color: #121010;
 }
 
 /* STRUCTURE */
@@ -382,6 +433,20 @@ button:focus {
   background-image: url('../img/sipnosis_1.jpg');
 }
 
+/* Credits */
+#credits{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  height: 300px;
+  background-color: #000;
+}
+
+.credits-container{
+  margin: 50px 0;
+}
 
 /* media queries */
 @media screen and (max-width: 1024px) {
