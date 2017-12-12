@@ -2,26 +2,38 @@
   <div class="container">
     <div class="content">
       <div class="col-left">
-        <div class="video-container">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/tojgJx_dUiw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        <div class="container-video">
+          <h2>Voces de la Calle</h2>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="year">2015</p>
+            <p class="type">Action | Drama | Music</p>
+            <a href="http://www.imdb.com/title/tt6390900/" target="_blank"><img src="/img/imdb.svg" alt="IMDB icon"></a>
+          </div>
+          <p class="video-caption">Voces de la Calle es una película musical, cuenta la historia de tres amigos que quieren salir adelante a traves de un proyecto de música urbana, es la historia de Lucho, Víctor y Carlos, tres jóvenes que ponen a prueba su lealtad y el deseo de superación tratando de perseguir sus sueños.</p>
+          <div class="starting-container">
+            <p class="starting">Starting by:</p>
+            <p class="sub">Vladimir Acevedo, El Alfa, La Nueva Escuela, Melymel, entre otros...</p>
+          </div>
+          <div class="directed-container">
+            <p class="directed">Directed by: </p>
+            <p class="sub">Hans Garcia</p>
+          </div>
         </div>
       </div>
       <div class="col-right">
-        <div class="container-video">
-          <p class="video-caption">Corrian los años 70s y era común ver los
-          niños corretear cuando veían un avión
-          sobrevolando nuestro barrio gritando
-          que ahí iba su papa…</p>
-          <button type="button" id="button-movie" class="custom-btn" data-toggle="modal" data-target="#movie_review_modal">
-            <div class="btn-icon">
-              <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-            </div>
-            <div class="btn-content">
-              <p>VER CRITICA</p>
-            </div>
-          </button>
-        </div>
-        {{ partial "movie_review.html" }}
+        <button type="button" id="trailer_vc_movie" class="custom-btn" data-toggle="modal" data-target="#voces_modal">
+          <div class="btn-icon">
+            <i class="fa fa-5x fa-play-circle" aria-hidden="true"></i>
+          </div>
+        </button>
+        {{ partial "trailer_vc_modal.html" }}
       </div>
     </div>
   </div>

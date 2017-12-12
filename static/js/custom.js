@@ -100,3 +100,31 @@ $('a[href*="#"]')
       }
     }
   });
+
+
+/* Video Trailer VC */
+$("#trailer_vc_movie").click(function (ev) {
+    /*$("#trailer_voces")[0].src += "?autoplay=1";
+    setTimeout(function(){ $("#trailer_voces").show(); }, 200);*/
+    var play = 'playVideo';
+    toggleVideo(play);
+});
+
+$("#voces_modal").click(function (ev) {
+    /*$("#trailer_voces")[0].src += "?autoplay=1";
+    setTimeout(function(){ $("#trailer_voces").show(); }, 200);*/
+    var stop = 'stop';
+    toggleVideo(stop);
+});
+
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var iframe = $("#trailer_vc_movie")[0].contentWindow;
+    func = state == 'stop' ? 'pauseVideo' : 'playVideo';
+    if (state == 'playVideo') {
+      $("#trailer_voces")[0].src = "https://www.youtube.com/embed/tojgJx_dUiw?autoplay=1";
+    } else if (state == 'stop' ){
+      $("#trailer_voces")[0].src = "https://www.youtube.com/embed/tojgJx_dUiw";
+    }
+
+}
