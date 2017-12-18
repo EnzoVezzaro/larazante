@@ -882,6 +882,22 @@ button:focus {
   }
 }
 
+@media screen and (max-width: 425px) {
+  #credits{
+    height: 500px;
+  }
+  #main-homepage{
+    margin-bottom: 550px;
+  }
+  .awards-badges{
+    flex-direction: column !important;
+  }
+  #awards .content .awards-badges .center img, #awards .content .awards-badges .left img, #awards .content .awards-badges .right img{
+    width: 100%;
+    margin: 20px 0px;
+  }
+}
+
 @media screen and (max-width: 380px) {
   h2{
     font-size: 32px;
