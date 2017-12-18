@@ -70,6 +70,7 @@
 #main-homepage {
     transition: margin-left .5s;
     margin-bottom: 300px;
+    background-color: #000;
 }
 
 
