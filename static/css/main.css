@@ -21,7 +21,7 @@
     background: #111 url('../img/menu_image.png'); /* Black*/
     background-position: bottom;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -120,6 +120,22 @@ button:focus {
 
 .align-left{
   align-items: flex-start !important;
+}
+
+.develop-by{
+  text-align: center;
+  position: relative;
+}
+
+.develop-by h5 a{
+  color: #961018;
+  font-family: 'Roboto', sans-serif;
+}
+
+.develop-by h5{
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* Preloader */
@@ -612,6 +628,8 @@ button:focus {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .container-video .rating img{
@@ -728,7 +746,7 @@ button:focus {
 }
 
 .credits-container{
-  margin: 50px 0;
+  margin: 50px 5%;
 }
 
 .credits-content .image-container{
@@ -780,6 +798,14 @@ button:focus {
     max-height: 250px;
   }
 
+  #credits{
+    height: 340px;
+  }
+
+  .develop-by{
+    margin: 20px 0;
+  }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -826,13 +852,57 @@ button:focus {
     width: 300px;
     height: 150px;
   }
+  .container-video .rating{
+    width: 100%;
+  }
+  .credits-container{
+    margin: 0 5%;
+  }
+  #main-homepage{
+    margin-bottom: 370px;
+  }
+  h2{
+    font-size: 46px;
+  }
+  h4{
+    font-size: 36px;
+  }
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px; }
-    .sidenav a {font-size: 18px;}
-    .introduction-container .introduction-content .introduction-footer .credits p{
-      font-size: 1rem;
-      line-height: 1rem;
-    }
+@media screen and (max-width: 768px) {
+  h2{
+    font-size: 36px;
+  }
+  h4
+  {
+    font-size: 24px;
+  }
+  .content .col-left .col-text{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  h2{
+    font-size: 32px;
+  }
+  h4
+  {
+    font-size: 20px;
+  }
+  #credits {
+    height: 470px;
+  }
+  #main-homepage {
+    margin-bottom: 500px;
+  }
+  #awards .content .awards-badges{
+    flex-direction: column;
+  }
+  #awards .content .awards-badges .item{
+    margin: 25px 0px;
+  }
+  #awards .content .awards-badges .right img, #awards .content .awards-badges .left img, #awards .content .awards-badges .center img{
+    width: 100%;
+  }
 }
