@@ -114,7 +114,7 @@ $('#carousel_cast').slick({
 $( document ).ready(function(){
   setTimeout(function(){
     $('#carousel_crew').css('display', 'none');
-  }, 2500);
+  }, 3500);
 });
 
 $( '#carousel_cast_link' ).click(function(){
