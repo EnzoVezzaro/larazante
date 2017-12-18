@@ -6,7 +6,7 @@ baseURL = "/"
 languageCode = "en-us"
 title = "La Razante"
 canonifyURLs = true
-googleAnalytics= ""
+googleAnalytics= "UA-108384646-3"
 
 [taxonomies]
   category = "categories"
@@ -18,3 +18,8 @@ googleAnalytics= ""
   variables = "Yes"
   english = "EN"
   logo = "/img/logo.svg"
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
