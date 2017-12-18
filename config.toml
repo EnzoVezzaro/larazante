@@ -13,7 +13,7 @@ googleAnalytics= ""
   tag = "tags"
 
 [params]
-  description = "Pelicula de Hans Garcia"
+  description = "LA RAZANTE es una película que narra un drama común no solo en sociedades como las de República Dominicana sino en cualquier parte del mundo"
   author = "Enzo Vezzaro"
   variables = "Yes"
   english = "EN"

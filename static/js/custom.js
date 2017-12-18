@@ -1,17 +1,81 @@
+// Preloader
+$(document).ready(function() {
+
+  var counter = 0;
+  var c = 0;
+  var i = setInterval(function(){
+      $(".loading-page .counter h1").html(c + "%");
+      $(".loading-page .counter hr").css("width", c + "%");
+      //$(".loading-page .counter").css("background", "linear-gradient(to right, #f60d54 "+ c + "%,#0d0d0d "+ c + "%)");
+
+    /*
+    $(".loading-page .counter h1.color").css("width", c + "%");
+    */
+    counter++;
+    c++;
+
+    if(counter == 101) {
+        clearInterval(i);
+        $(".loading-container").fadeOut();
+    }
+  }, 50);
+});
+
 // navbar
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.left = "0px";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
+    document.getElementById("mySidenav").style.left = "-250px";
 }
 
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene, {
+  relativeInput: true
+});
+
 /* Slick Carousel */
-$('.carousel').slick({
+$('#carousel_crew').slick({
+  centerMode: true,
+  centerPadding: '0px',
+  slidesToShow: 3,
+  refresh: true,
+  adaptiveHeight: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+
+$('#carousel_cast').slick({
   centerMode: true,
   centerPadding: '0px',
   slidesToShow: 3,
@@ -48,7 +112,9 @@ $('.carousel').slick({
 });
 
 $( document ).ready(function(){
-  $('#carousel_crew').css('display', 'none');
+  setTimeout(function(){
+    $('#carousel_crew').css('display', 'none');
+  }, 2500);
 });
 
 $( '#carousel_cast_link' ).click(function(){

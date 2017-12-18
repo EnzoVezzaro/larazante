@@ -4,12 +4,14 @@
     {{ partial "head.html" }}
   </head>
   <body>
+    {{ partial "preloader.html" }}
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-    <div id="main">
+    <div class="main-index" id="main">
       {{ partial "intro.html" }}
     </div>
 
 
+    {{ partial "index-footer.html" }}
 
     {{ partial "scripts.html" }}
   </body>

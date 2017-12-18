@@ -13,12 +13,15 @@
 /* The side navigation menu */
 .sidenav {
     height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 250px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 99999; /* Stay on top */
     top: 0;
-    left: 0;
-    background-color: #111; /* Black*/
+    left: -250px;
+    background: #111 url('../img/menu_image.png'); /* Black*/
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -52,6 +55,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
+  z-index: 999;
 }
 
 .navbar-icon i{
@@ -74,6 +78,12 @@ body{
   background-color: #000;
 }
 
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+  /*font-family: 'Open Sans Condensed', sans-serif;*/
+}
+
 h2{
   font-size: 60px;
   color: #ffffff;
@@ -83,6 +93,21 @@ h2{
 h4{
   font-size: 36px;
   color: #FFCC33;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+}
+
+p{
+  font-family: 'Roboto', sans-serif;
+}
+
+.secondary{
+  font-size: 28px !important;
+  color: #FFCC33 !important;
+}
+
+a:hover{
+  text-decoration: none;
 }
 
 button:hover {
@@ -95,6 +120,68 @@ button:focus {
 
 .align-left{
   align-items: flex-start !important;
+}
+
+/* Preloader */
+
+.loading-container {
+  position: fixed;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Roboto;
+  z-index: 9999999;
+}
+
+.loading-page {
+  background: #0d0d0d;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.loading-page .counter {
+  text-align: center;
+}
+.loading-page .counter p {
+  font-size: 40px;
+  font-weight: 100;
+  color: #ffcc33;
+}
+.loading-page .counter h1 {
+  color: white;
+  font-size: 60px;
+  margin-top: -10px;
+}
+.loading-page .counter hr {
+  background: #ffcc33;
+  border: none;
+  height: 1px;
+}
+.loading-page .counter {
+  position: relative;
+  width: 200px;
+}
+.loading-page .counter h1.abs {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.loading-page .counter .color {
+  width: 0px;
+  overflow: hidden;
+  color: #f60d54;
 }
 
 /* CUSTOM BTN */
@@ -237,13 +324,52 @@ button:focus {
 
 /* introduction */
 
-.introduction-container {
-  height: 100vh;
-  width: 100%;
+.main-index{
+  margin-bottom: 250px;
+}
+
+#scene{
   background-image: url('../img/index_background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#scene-1{
+  background-image: url('../img/scene-2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+#scene-2{
+  background-image: url('../img/scene-1.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+#scene-3{
+  background-image: url('../img/scene-3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+}
+
+.introduction-container {
+  height: 100vh;
+  width: 100%;
 }
 
 .introduction-container .introduction-content{
@@ -277,13 +403,13 @@ button:focus {
   align-items: flex-end;
   justify-content: center;
   color: #fff;
-  background-image: linear-gradient(
+  /*background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 1) 0%,
     rgba(0, 0, 0, 1) 60%,
     rgba(0, 0, 0, 0) 80%,
     rgba(0, 0, 0, 0) 100%
-    );
+    );*/
 }
 
 .introduction-container .introduction-content .introduction-footer .credits{
@@ -292,12 +418,36 @@ button:focus {
   padding-bottom: 20px;
 }
 
+#index-footer{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+  height: 250px;
+  background-color: #000;
+}
+
+.index-footer-container .index-footer-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 250px;
+}
+
+.index-footer-container .index-footer-content img{
+  width: 150px;
+  height: auto;
+  margin-bottom: 50px;
+}
+
 .credits p{
   font-family: credits;
   font-size: 2.5rem;
   line-height: 2.5rem;
   text-align: center;
-  color: #939393;
+  color: #fff;
 }
 
 /* SIPNOSIS */
@@ -326,6 +476,28 @@ button:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#crew_member .text-carousel{
+  position: relative;
+  left: 30px;
+  top: 10px;
+  transition: 0.5s ease;
+}
+
+#crew_member .text-carousel p{
+  margin: 0;
+}
+
+#crew_member .text-carousel:hover{
+  position: relative;
+  left: 30px;
+  top: 20px;
+}
+
+#crew_member .container .content .carousel-nav {
+  position: absolute;
+  margin-top: 300px;
 }
 
 /* Movie */
@@ -399,7 +571,7 @@ button:focus {
   width: 80%;
   height: 80%;
   border: 0;
-  background-color: '#000';
+  background-color: #000 !important;
 }
 
 #voces_modal .voces-modal-button{
@@ -457,6 +629,23 @@ button:focus {
 /* Awards */
 #awards{
   background-color: #121010;
+}
+
+#awards .content .awards-badges{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+#awards .content .awards-badges .center img{
+  width: 100%;
+}
+
+#awards .content .awards-badges .right img, #awards .content .awards-badges .left img{
+  width: 55%;
 }
 
 /* STRUCTURE */
@@ -540,6 +729,34 @@ button:focus {
 
 .credits-container{
   margin: 50px 0;
+}
+
+.credits-content .image-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.credits-content .image-container i{
+  color: #fff;
+  margin: 0 10px;
+  transition: 0.2s ease;
+}
+
+.credits-content .image-container #facebook:hover{
+  color: #3b5998;
+}
+
+.credits-content .image-container #instagram:hover{
+  color: #fb3958;
+}
+
+.credits-content .image-container #twitter:hover{
+  color: #0084b4;
+}
+
+.credits-content .image-container img{
+  width: 150px;
 }
 
 /* media queries */
