@@ -749,6 +749,10 @@ button:focus {
 
 .credits-container{
   margin: 50px 5%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 80%;
 }
 
 .credits-content .image-container{
