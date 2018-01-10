@@ -1,10 +1,7 @@
-contentDir = "content"
-layoutDir = "layouts"
-publishDir = "public"
-buildDrafts = true
-baseURL = "/"
+baseURL = "https://www.larasante.com/"
 languageCode = "en-us"
-title = "La Razante"
+title = "La Rasante Movie - De los credores de @vocesdelacalle la nueva película del Director Hans García"
+buildDrafts = true
 canonifyURLs = true
 googleAnalytics= "UA-108384646-3"
 
@@ -13,11 +10,8 @@ googleAnalytics= "UA-108384646-3"
   tag = "tags"
 
 [params]
-  description = "LA RAZANTE es una película que narra un drama común no solo en sociedades como las de República Dominicana sino en cualquier parte del mundo"
+  description = "LA RAZANTE es una película que narra un drama común que narra la historia de abandono que sufren muchos niños con padres que se ausentan dejando todo el peso de la crianza a las madres y que estas siempre con la esperanza que estos niños abandonados idealicen al padre ausente."
   author = "Enzo Vezzaro"
-  variables = "Yes"
-  english = "EN"
-  logo = "/img/logo.svg"
 
 [sitemap]
   changefreq = "monthly"
